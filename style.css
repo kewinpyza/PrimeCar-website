@@ -1,0 +1,219 @@
+/* body */
+
+body {
+  font-family: "Montserrat";
+  color: #2330e8;
+  background-color: #000000;
+}
+
+/* content  */
+#brands {
+  width: 1700px;
+  height: auto;
+  margin: 50px auto 10px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.brand-item {
+  width: 400px;
+  height: 400px;
+  border: 1px solid #2e3cff;
+  margin: 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand-logo {
+  width: 400px;
+  height: 400px;
+}
+
+.brand-models-wrapper {
+  display: none;
+}
+
+.brand-item:hover > .brand-logo {
+  display: none;
+}
+
+.brand-item:hover > .brand-models-wrapper {
+  display: block;
+}
+
+.brand-models-wrapper > ul {
+  list-style-type: none;
+}
+
+.brand-models-wrapper > ul > li {
+  margin: 20px;
+}
+
+.brand-model {
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.brand-model:hover {
+  text-decoration: underline;
+}
+
+.brand-model:visited {
+  text-decoration: none;
+  color: #2e3cff;
+}
+
+/* footer  */
+footer {
+  color: #ffffff;
+  margin-top: 50px;
+  padding: 20px;
+  border-top: 1px solid #2e3cff;
+}
+
+#footer-content {
+  margin-left: 40px;
+  display: flex;
+}
+
+#salon-image-wrapper {
+  display: inline;
+  width: 450px;
+  height: 220px;
+}
+
+.footer-info {
+  margin-left: 10px;
+  width: 300px;
+  padding: 0 10px 10px 10px;
+}
+
+.info-title {
+  padding: 0 2px 2px 2px;
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Montserrat-Black";
+  color: #2e3cff;
+}
+
+/* header  */
+header {
+  padding: 10px;
+  border-bottom: 1px solid #2e3cff;
+}
+
+#header-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+#header-menu {
+  display: flex;
+  align-items: center;
+}
+
+.header-menu-item {
+  padding: 0 20px 0 20px;
+}
+
+/* #header-title {
+  font-family: "Island Moments", cursive;
+  font-weight: 600;
+  font-size: 40px;
+} */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2e3cff;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2e3cff;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* ////////////////////////////////// */
+/* kews */
+
+#mainNavbar {
+  font-size: 1.2rem;
+  border-bottom: 1px solid #2e3cff;
+}
+
+#mainNavbar .nav-link {
+  color: #e1dede;
+  font-family: "Montserrat-Light";
+}
+
+#mainNavbar .nav-link:hover {
+  color: #594afd;
+  text-decoration: underline;
+}
+
+#mainNavbar .navbar-brand {
+  color: #2e3cff;
+  font-family: "Island Moments", cursive;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+#footer {
+  font-size: 1.1rem;
+}
+
+.media-icon {
+  font-size: 1.5rem;
+  margin: 20px 10px;
+}
