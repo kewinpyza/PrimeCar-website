@@ -55,26 +55,31 @@
                 <div id="header-menu">
                   <div class="header-menu-item">
                     <label class="switch">
-                      <input type="checkbox" checked />
+                      <input id="theme-switcher" type="checkbox" checked />
                       <span class="slider round"></span>
                     </label>
                   </div>
                   <div class="header-menu-item">
-                    <div class="header-menu-item-icon">
-                      <img src="images/sound.svg" height="30px" width="30px" />
-                    </div>
+                    <i id="volume-icon" class="fa-solid fa-volume-high"></i>
+                    <i
+                      id="volume-none-icon"
+                      class="fa-solid fa-volume-xmark d-none"
+                    ></i>
                   </div>
                 </div>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Home</a>
+              <a class="nav-link" aria-current="page" href="">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">O nas</a>
+              <a class="nav-link" href="#about">O nas</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Kontakt</a>
+              <a class="nav-link" href="#slides">Galeria</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">Kontakt</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Zaloguj się</a>
@@ -84,25 +89,13 @@
       </div>
     </nav>
 
-    <!-- <div id="page">
-      <header>
-        <div id="header-content">
-          <div id="header-title">Prime Car</div>
-          <div id="header-menu">
-            <div class="header-menu-item">
-              <label class="switch">
-                <input type="checkbox" checked />
-                <span class="slider round"></span>
-              </label>
-            </div>
-            <div class="header-menu-item">
-              <div class="header-menu-item-icon">
-                <img src="images/sound.svg" height="30px" width="30px" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </header> -->
+    <div class="container-fluid">
+      <audio id="audioM" controls>
+        <source src="music/Cartoon.mp3" type="audio/mpeg" />
+        Please update your browser does not support the audio element.
+      </audio>
+    </div>
+
     <div id="content">
       <div id="brands">
         <div class="brand-item">
@@ -126,23 +119,88 @@
           </div>
         </div>
         <div class="brand-item">
-          <img class="brand-logo" src="images/cars/bentley.jpg" alt="bentley" />
+          <img
+            class="brand-logo"
+            src="images/cars/aston-martin.jpg"
+            alt="aston-martin"
+          />
+          <div class="brand-models-wrapper">
+            <ul>
+              <li>
+                <a class="brand-model" href="#">Vantage</a>
+              </li>
+              <li>
+                <a class="brand-model" href="#">DB11</a>
+              </li>
+              <li>
+                <a class="brand-model" href="#">DBS</a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="brand-item">
           <img class="brand-logo" src="images/cars/ferrari.jpg" alt="ferrari" />
+          <div class="brand-models-wrapper">
+            <ul>
+              <li>
+                <a class="brand-model" href="#">SF90 Spider</a>
+              </li>
+              <li>
+                <a class="brand-model" href="#">F8 Tributo</a>
+              </li>
+              <li>
+                <a class="brand-model" href="#">Roma</a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="brand-item">
-          <img
-            class="brand-logo"
-            src="images/cars/aston-martion.png"
-            alt="aston-martin"
-          />
+          <img class="brand-logo" src="images/cars/bugatti.jpg" alt="bugatti" />
+          <div class="brand-models-wrapper">
+            <ul>
+              <li>
+                <a class="brand-model" href="#">Veyron</a>
+              </li>
+              <li>
+                <a class="brand-model" href="#">Chiron</a>
+              </li>
+              <li>
+                <a class="brand-model" href="#">Divo</a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="brand-item">
-          <img class="brand-logo" src="images/cars/mclaren.jpg" alt="mclaren" />
+          <img class="brand-logo" src="images/cars/porshe.jpg" alt="porshe" />
+          <div class="brand-models-wrapper">
+            <ul>
+              <li>
+                <a class="brand-model" href="#">911 Turbo</a>
+              </li>
+              <li>
+                <a class="brand-model" href="#">Panamera</a>
+              </li>
+              <li>
+                <a class="brand-model" href="#">Taycan</a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="brand-item">
           <img class="brand-logo" src="images/cars/pagani.jpg" alt="pagani" />
+          <div class="brand-models-wrapper">
+            <ul>
+              <li>
+                <a class="brand-model" href="#">Huayra</a>
+              </li>
+              <li>
+                <a class="brand-model" href="#">Utopia</a>
+              </li>
+              <li>
+                <a class="brand-model" href="#">Zonda</a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="brand-item">
           <img
@@ -150,63 +208,139 @@
             src="images/cars/rolls-royce.png"
             alt="rolls-royce"
           />
+          <div class="brand-models-wrapper">
+            <ul>
+              <li>
+                <a class="brand-model" href="#">Cullinan</a>
+              </li>
+              <li>
+                <a class="brand-model" href="#">Spectre</a>
+              </li>
+              <li>
+                <a class="brand-model" href="#">Phantom</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="brand-item">
+          <img class="brand-logo" src="images/cars/bentley.jpg" alt="bentley" />
+          <div class="brand-models-wrapper">
+            <ul>
+              <li>
+                <a class="brand-model" href="#">Bentayga</a>
+              </li>
+              <li>
+                <a class="brand-model" href="#">Continental</a>
+              </li>
+              <li>
+                <a class="brand-model" href="#">Flying Spur</a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="brand-item">
           <img class="brand-logo" src="images/cars/tesla.jpg" alt="tesla" />
-        </div>
-      </div>
-    </div>
-
-    <!-- Footer  -->
-    <!-- <footer>
-      <div id="footer-content">
-        <div id="salon-image-wrapper">
-          <img src="images/salon.jpg" width="450px" height="220px" />
-        </div>
-        <div class="footer-info" id="info-about">
-          <div class="info-title">O nas</div>
-          <div class="info-content">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </div>
-        </div>
-        <div class="footer-info" id="info-social">
-          <div class="info-title">Social media</div>
-          <div class="info-content">
+          <div class="brand-models-wrapper">
             <ul>
-              <li>Facebook</li>
-              <li>Instagram</li>
-              <li>Twitter</li>
-              <li>Linkedin</li>
+              <li>
+                <a class="brand-model" href="#">Model S</a>
+              </li>
+              <li>
+                <a class="brand-model" href="#">Model 3</a>
+              </li>
+              <li>
+                <a class="brand-model" href="#">Model X</a>
+              </li>
             </ul>
           </div>
         </div>
       </div>
-    </footer> -->
+    </div>
 
-    <section class="container-fluid px-0">
-      <div class="row align-items-center section-content">
-        <div class="col-md-6 order-2 order-md-1">
-          <img class="img-fluid" src="images/salon.jpg" alt="Car salon image" />
-        </div>
-        <div class="col-md-6 text-center order-1 order-md-2">
-          <div class="row justify-content-center">
-            <div class="col-10 col-lg-8 sweets mb-5 mb-md-0">
-              <h2>O nas</h2>
-              <p class="lead">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
-                quasi voluptatibus deleniti. Corporis eveniet eum facilis
-                assumenda, doloribus voluptatem voluptatibus et iste. Minus
-                deserunt saepe eum fugiat soluta rerum cum.
-              </p>
+    <section id="gipher">
+      <div class="giphy-section">
+        <img
+          id="code-gif"
+          src="https://media3.giphy.com/media/VXiH9ANZrMLio/giphy.gif?cid=790b7611cd453a0eaa830e54af131c0b50f85c63b374c282&rid=giphy.gif&ct=g"
+          alt="Giphy"
+        />
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container-fluid">
+        <div class="row align-items-center section-content">
+          <div class="col-lg-6 order-2 order-lg-1">
+            <img
+              class="img-fluid"
+              src="images/salon.jpg"
+              alt="Car salon image"
+            />
+          </div>
+          <div id="about-us" class="col-lg-6 text-center order-1 order-lg-2">
+            <div class="row justify-content-center">
+              <div class="col-10 col-lg-8 sweets mb-5 mb-md-0">
+                <h2 class="head-section">O nas</h2>
+                <p class="lead">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
+                  quasi voluptatibus deleniti. Corporis eveniet eum facilis
+                  assumenda, doloribus voluptatem voluptatibus et iste. Minus
+                  deserunt saepe eum fugiat soluta rerum cum. Lorem ipsum dolor
+                  sit amet, consectetur adipisicing elit. Nobis nemo inventore
+                  quibusdam minima! Veritatis ducimus cum quos amet doloribus,
+                  possimus modi earum reiciendis.
+                </p>
+              </div>
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section id="slides">
+      <div id="slide-carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner text-center">
+          <h2 class="mb-5 head-section">Galeria</h2>
+          <div class="carousel-item active container-fluid">
+            <img
+              class="slide-image"
+              src="images/carousel/willy.jpg"
+              alt="car-picture"
+            />
+          </div>
+          <div class="carousel-item container-fluid">
+            <img
+              class="slide-image"
+              src="images/carousel/buga2.jpg"
+              alt="car-picture"
+            />
+          </div>
+          <div class="carousel-item container-fluid">
+            <img
+              class="slide-image"
+              src="images/carousel/porschik2.jpg"
+              alt="car-picture"
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#slide-carousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#slide-carousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
     </section>
 
@@ -232,5 +366,6 @@
       integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
       crossorigin="anonymous"
     ></script>
+    <script src="script.js"></script>
   </body>
 </html>
