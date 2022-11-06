@@ -1,6 +1,7 @@
-let theme;
+localStorage.setItem("theme", "dark");
+
 window.onload = function () {
-  theme = localStorage.getItem("theme");
+  let theme = localStorage.getItem("theme");
 
   if (!theme) {
     localStorage.setItem("theme", "dark");
@@ -20,17 +21,18 @@ window.onload = function () {
   };
 };
 
-function setLightTheme() {
+const setLightTheme = function () {
   document.getElementById("theme-switcher").removeAttribute("checked");
   document.body.style.backgroundColor = "#e3e3e3";
   document.getElementById("mainNavbar").style.borderBottom =
     "2px solid #630000";
   document.getElementById("about").style.borderTop = "2px solid #630000";
-  document.getElementById("slides").style.borderTop = "2px solid #630000";
   document.getElementById("footer").style.color = "#630000";
   document.getElementById("footer").style.borderTop = "2px solid #630000";
   document.getElementById("about-us").style.color = "#630000";
   document.getElementById("slide-carousel").style.color = "#630000";
+  document.getElementById("slides").style.borderTop = "2px solid #630000";
+
   document.getElementById("code-gif").src = "images/bentley.jpg";
   document.getElementById("audioM").pause();
   document.getElementById("volume-icon").classList.add("d-none");
@@ -57,9 +59,9 @@ function setLightTheme() {
   });
 
   localStorage.setItem("theme", "light");
-}
+};
 
-function setDarkTheme() {
+const setDarkTheme = function () {
   document.body.style.backgroundColor = "#000000";
   document.getElementById("mainNavbar").style.borderBottom =
     "1px solid #2e3cff";
@@ -72,6 +74,8 @@ function setDarkTheme() {
   document.getElementById("audioM").play();
   document.getElementById("volume-icon").classList.remove("d-none");
   document.getElementById("volume-none-icon").classList.add("d-none");
+  document.getElementById("slide-carousel").style.color = "#2e3cff";
+  document.getElementById("slides").style.borderTop = "2px solid #2e3cff";
 
   document.querySelectorAll(".carousel-item").forEach((item) => {
     item.removeAttribute("data-bs-interval");
@@ -94,10 +98,13 @@ function setDarkTheme() {
   });
 
   localStorage.setItem("theme", "dark");
-}
+};
 
 window.onscroll = function () {
-  if (document.documentElement.scrollTop > 1) {
+  if (
+    document.documentElement.scrollTop > 1 &&
+    localStorage.getItem("theme") === "dark"
+  ) {
     document.getElementById("audioM").play();
   }
   window.onscroll = null;
